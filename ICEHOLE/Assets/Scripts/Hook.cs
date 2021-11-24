@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Hook : MonoBehaviour
 {
     private GameObject pole;
     private GameObject fishes;
+    
+    private GameObject eatFishButton;
     LineRenderer lineRenderer;
 
     bool isHooking;
-    bool fishWasHooked;
+    public bool fishWasHooked;
 
     float hookDistance;
     Vector3 originalPosition;
@@ -21,6 +24,10 @@ public class Hook : MonoBehaviour
    public void Awake()
     {
         pole = GameObject.FindGameObjectWithTag("Pole");
+
+        eatFishButton = GameObject.Find("EatFishButton");
+        eatFishButton.SetActive(false);
+
         lineRenderer = GetComponent<LineRenderer>();
         isHooking = false;
         fishWasHooked = false;
@@ -72,7 +79,8 @@ public class Hook : MonoBehaviour
         {
             Vector3 finalPosition = new Vector3(originalPosition.x, originalPosition.y, originalPosition.z);
             fishes.transform.position = Vector3.MoveTowards(fishes.transform.position, finalPosition, Constants.MAX_HOOK_DISTANCE);
-            fishWasHooked = false;
+            eatFishButton.SetActive(true);
+            
         }
     }
 
