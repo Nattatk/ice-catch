@@ -9,6 +9,7 @@ TagManager:
   - Pole
   - Fishes
   - Fish
+  - HungerSlider
   layers:
   - Default
   - TransparentFX
