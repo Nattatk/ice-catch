@@ -555,16 +555,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 718175900ef8a3e49ba91f93200e7458, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1968504781}
+        m_TargetAssemblyTypeName: Hunger, Assembly-CSharp
+        m_MethodName: EatFish
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: EatFish()
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &135809188
@@ -654,6 +654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718175900ef8a3e49ba91f93200e7458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hungerSlider: {fileID: 0}
+  hungerSlider2: {fileID: 0}
   hi: {fileID: 0}
   hookScript: {fileID: 0}
   hunger: 0
@@ -7230,6 +7232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1968504779}
   - component: {fileID: 1968504780}
+  - component: {fileID: 1968504781}
   m_Layer: 5
   m_Name: Hunger Slider
   m_TagString: HungerSlider
@@ -7306,10 +7309,27 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 4
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1968504781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968504778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718175900ef8a3e49ba91f93200e7458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungerSlider: {fileID: 0}
+  hungerSlider2: {fileID: 1968504778}
+  hi: {fileID: 0}
+  hookScript: {fileID: 0}
+  hunger: 0
 --- !u!1 &1977453050
 GameObject:
   m_ObjectHideFlags: 0
