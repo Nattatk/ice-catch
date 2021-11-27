@@ -654,11 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718175900ef8a3e49ba91f93200e7458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerSlider: {fileID: 0}
-  hungerSlider2: {fileID: 0}
-  hi: {fileID: 0}
   hookScript: {fileID: 0}
-  hunger: 0
 --- !u!1001 &193006112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -920,6 +916,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7326352196256775916, guid: c2232e92cc23cc8489da4dff6faed42f, type: 3}
   m_PrefabInstance: {fileID: 7326352195866061872}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &414601950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7326352196256775917, guid: c2232e92cc23cc8489da4dff6faed42f, type: 3}
+  m_PrefabInstance: {fileID: 7326352195866061872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414601947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b963e9ca224cde44a99352c544121c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!120 &414601953
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -7325,11 +7332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718175900ef8a3e49ba91f93200e7458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerSlider: {fileID: 0}
-  hungerSlider2: {fileID: 1968504778}
-  hi: {fileID: 0}
-  hookScript: {fileID: 0}
-  hunger: 0
+  hookScript: {fileID: 414601950}
 --- !u!1 &1977453050
 GameObject:
   m_ObjectHideFlags: 0
