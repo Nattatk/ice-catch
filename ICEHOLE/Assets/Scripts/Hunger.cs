@@ -9,12 +9,12 @@ using UnityEngine.UI;
 public class Hunger : MonoBehaviour
 {
     
-    public UnityEngine.UI.Slider hungerSlider;
+    private UnityEngine.UI.Slider hungerSlider;
 
-    public GameObject hungerSlider2;
-    public GameObject hi;
+    
+    
     public Hook hookScript;
-    public int hunger;
+   // public int hunger;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +39,7 @@ public class Hunger : MonoBehaviour
     public void EatFish() 
     {
         hookScript.fishWasHooked = false;
-        hungerSlider.value += 2;
+        hungerSlider.value += 5;
+        Destroy(hookScript.fishes);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class Hook : MonoBehaviour
 {
     private GameObject pole;
-    private GameObject fishes;
+    public GameObject fishes;
     
     private GameObject eatFishButton;
     LineRenderer lineRenderer;
