@@ -10,7 +10,7 @@ public class Hunger : MonoBehaviour
 {
     
     private UnityEngine.UI.Slider hungerSlider;
-
+    //private GameObject eatFishButton;
     
     
     public Hook hookScript;
@@ -18,7 +18,7 @@ public class Hunger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //eatFishButton = GameObject.Find("EatFishButton");
         hungerSlider = GameObject.Find("Hunger Slider").GetComponent<UnityEngine.UI.Slider>();
         hungerSlider.value = 10;
         StartCoroutine("HungerRoutine");
@@ -41,5 +41,8 @@ public class Hunger : MonoBehaviour
         hookScript.fishWasHooked = false;
         hungerSlider.value += 5;
         Destroy(hookScript.fishes);
+        hookScript.eatFishButton.SetActive(false);
+
+        Debug.Log("Is fish hooked: " + hookScript.fishWasHooked);
     }
 }

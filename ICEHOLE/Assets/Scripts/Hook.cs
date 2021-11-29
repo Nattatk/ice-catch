@@ -8,7 +8,7 @@ public class Hook : MonoBehaviour
     private GameObject pole;
     public GameObject fishes;
     
-    private GameObject eatFishButton;
+    public GameObject eatFishButton;
     LineRenderer lineRenderer;
 
     bool isHooking;
