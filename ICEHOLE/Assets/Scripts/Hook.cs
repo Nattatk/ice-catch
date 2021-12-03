@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class Hook : MonoBehaviour
 {
     private GameObject pole;
+    private PlayQuickSound playQuickSound;
     public GameObject fishes;
     
     public GameObject eatFishButton;
@@ -23,6 +24,7 @@ public class Hook : MonoBehaviour
     // Start is called before the first frame update
    public void Awake()
     {
+        playQuickSound = GetComponent<PlayQuickSound>();
         pole = GameObject.FindGameObjectWithTag("Pole");
 
         eatFishButton = GameObject.Find("EatFishButton");
@@ -91,6 +93,7 @@ public class Hook : MonoBehaviour
             Debug.Log("Hooked");
             fishWasHooked = true;
             fishes = collider.gameObject;
+            playQuickSound.Play();
         }
     }
 
