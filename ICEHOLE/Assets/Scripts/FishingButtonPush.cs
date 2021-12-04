@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class FishingButtonPush : MonoBehaviour
 {
-
     public void NextScene()
     {
-        SceneManager.LoadScene("FishingHole");
+            SceneManager.LoadScene("FishingHole");
     }
-
 
 }
 
