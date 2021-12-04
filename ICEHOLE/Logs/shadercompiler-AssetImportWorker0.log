@@ -1,0 +1,10 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.19f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.19f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+
+<<<<<<< HEAD:ICEHOLE/Logs/shadercompiler-UnityShaderCompiler.exe13.log
+Cmd: shutdown
+=======
+Unhandled exception: Protocol error - failed to read magic number (error -2147483644, transferred 0/4)
+
+Quitting shader compiler process
+>>>>>>> 3dfdd9cde33175b56536048ebccf9bdbe0d43f4d:ICEHOLE/Logs/shadercompiler-AssetImportWorker0.log
