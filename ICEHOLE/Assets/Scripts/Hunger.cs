@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
@@ -11,7 +12,8 @@ public class Hunger : MonoBehaviour
     
     private UnityEngine.UI.Slider hungerSlider;
     //private GameObject eatFishButton;
-    
+    private int hungerTime;
+    private GameObject youStarvedText;
     
     public Hook hookScript;
    // public int hunger;
@@ -20,6 +22,9 @@ public class Hunger : MonoBehaviour
     {
         //eatFishButton = GameObject.Find("EatFishButton");
         hungerSlider = GameObject.Find("Hunger Slider").GetComponent<UnityEngine.UI.Slider>();
+        youStarvedText = GameObject.Find("You Starved");
+        youStarvedText.SetActive(false);
+        hungerTime = Random.Range(5, 16);
         hungerSlider.value = 10;
         StartCoroutine("HungerRoutine");
     }
@@ -32,8 +37,15 @@ public class Hunger : MonoBehaviour
 
     IEnumerator HungerRoutine() 
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(hungerTime);
         hungerSlider.value--;
+        hungerTime = Random.Range(5, 16);
+        if (hungerSlider.value <= 0) 
+        {
+            youStarvedText.SetActive(true);
+            
+        }
+        StartCoroutine("HungerRoutine");
     }
 
     public void EatFish() 
@@ -44,5 +56,11 @@ public class Hunger : MonoBehaviour
         hookScript.eatFishButton.SetActive(false);
 
         Debug.Log("Is fish hooked: " + hookScript.fishWasHooked);
+    }
+
+    IEnumerator GameOverRoutine() 
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("FishingHole");
     }
 }
